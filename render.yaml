@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: counter-app
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /count
+    autoDeploy: true
+
+    # --- Keep the count across restarts/redeploys (needs a PAID plan) ---
+    # 1. Change `plan: free` above to `plan: starter`
+    # 2. Uncomment the lines below
+    # envVars:
+    #   - key: DATA_FILE
+    #     value: /data/data.json
+    # disk:
+    #   name: counter-data
+    #   mountPath: /data
+    #   sizeGB: 1

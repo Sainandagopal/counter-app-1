@@ -1,0 +1,29 @@
+{
+  "name": "counter-app",
+  "version": "1.0.0",
+  "description": "A high-aesthetic, zero-dependency Counter App built with Node.js built-in http module",
+  "homepage": "https://sainandagopal.github.io/counter-app-1",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "node scripts/build.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist --nojekyll"
+  },
+  "keywords": [
+    "nodejs",
+    "http",
+    "vanillajs",
+    "counter",
+    "zero-dependency",
+    "github-pages"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
